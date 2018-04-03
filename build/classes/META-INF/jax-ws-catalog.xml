@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/UserServer/UserService?wsdl" uri="wsdl/localhost_8080/UserServer/UserService.wsdl"/>
+    <system systemId="http://localhost:8080/UserServer/UserService?xsd=1" uri="wsdl/localhost_8080/UserServer/UserService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/SimpleWeatherPrototypeServer.3/SimpleWebServer?wsdl" uri="wsdl/localhost_8080/SimpleWeatherPrototypeServer.3/SimpleWebServer.wsdl"/>
+    <system systemId="http://localhost:8080/SimpleWeatherPrototypeServer.3/SimpleWebServer?xsd=1" uri="wsdl/localhost_8080/SimpleWeatherPrototypeServer.3/SimpleWebServer.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/OnlineChatServer/UserService?wsdl" uri="wsdl/localhost_8080/OnlineChatServer/UserService.wsdl"/>
+    <system systemId="http://localhost:8080/OnlineChatServer/UserService?xsd=1" uri="wsdl/localhost_8080/OnlineChatServer/UserService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/OnlineChatServer/ThreadService?wsdl" uri="wsdl/localhost_8080/OnlineChatServer/ThreadService.wsdl"/>
+    <system systemId="http://localhost:8080/OnlineChatServer/ThreadService?xsd=1" uri="wsdl/localhost_8080/OnlineChatServer/ThreadService.xsd_1.xsd"/>
+</catalog>

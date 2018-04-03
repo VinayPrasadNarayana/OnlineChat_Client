@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://ThreadServer/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ThreadServer/">
+
+<xs:element name="AddThread" type="tns:AddThread"/>
+
+<xs:element name="AddThreadResponse" type="tns:AddThreadResponse"/>
+
+<xs:element name="createMessage" type="tns:createMessage"/>
+
+<xs:element name="createMessageResponse" type="tns:createMessageResponse"/>
+
+<xs:element name="findThread" type="tns:findThread"/>
+
+<xs:element name="findThreadResponse" type="tns:findThreadResponse"/>
+
+<xs:element name="getMessagesInfo" type="tns:getMessagesInfo"/>
+
+<xs:element name="getMessagesInfoResponse" type="tns:getMessagesInfoResponse"/>
+
+<xs:element name="getNumOfMessages" type="tns:getNumOfMessages"/>
+
+<xs:element name="getNumOfMessagesResponse" type="tns:getNumOfMessagesResponse"/>
+
+<xs:element name="getNumOfThreads" type="tns:getNumOfThreads"/>
+
+<xs:element name="getNumOfThreadsResponse" type="tns:getNumOfThreadsResponse"/>
+
+<xs:element name="getThreadInfo" type="tns:getThreadInfo"/>
+
+<xs:element name="getThreadInfoResponse" type="tns:getThreadInfoResponse"/>
+
+<xs:element name="getThreads" type="tns:getThreads"/>
+
+<xs:element name="getThreadsResponse" type="tns:getThreadsResponse"/>
+
+<xs:element name="hello" type="tns:hello"/>
+
+<xs:element name="helloResponse" type="tns:helloResponse"/>
+
+<xs:element name="resetIsEditing" type="tns:resetIsEditing"/>
+
+<xs:element name="resetIsEditingResponse" type="tns:resetIsEditingResponse"/>
+
+<xs:element name="returnMessages" type="tns:returnMessages"/>
+
+<xs:element name="returnMessagesResponse" type="tns:returnMessagesResponse"/>
+
+<xs:element name="saveThreads" type="tns:saveThreads"/>
+
+<xs:element name="saveThreadsResponse" type="tns:saveThreadsResponse"/>
+
+<xs:element name="setisEditing" type="tns:setisEditing"/>
+
+<xs:element name="setisEditingResponse" type="tns:setisEditingResponse"/>
+
+<xs:complexType name="getNumOfMessages">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getNumOfMessagesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findThread">
+<xs:sequence>
+<xs:element name="title" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findThreadResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:userThread" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="userThread">
+<xs:sequence>
+<xs:element name="author" type="xs:string" minOccurs="0"/>
+<xs:element name="isEditing" type="xs:boolean"/>
+<xs:element name="lastEdited" type="xs:string" minOccurs="0"/>
+<xs:element name="title" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="saveThreads">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="saveThreadsResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="AddThread">
+<xs:sequence>
+<xs:element name="title" type="xs:string" minOccurs="0"/>
+<xs:element name="author" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AddThreadResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getMessagesInfo">
+<xs:sequence>
+<xs:element name="i" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMessagesInfoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="resetIsEditing">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="resetIsEditingResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getNumOfThreads">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getNumOfThreadsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getThreads">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getThreadsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:userThread" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="returnMessages">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="returnMessagesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:message" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="message">
+<xs:sequence>
+<xs:element name="author" type="xs:string" minOccurs="0"/>
+<xs:element name="lastEdited" type="xs:string" minOccurs="0"/>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+<xs:element name="thread" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createMessage">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+<xs:element name="author" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createMessageResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getThreadInfo">
+<xs:sequence>
+<xs:element name="i" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getThreadInfoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setisEditing">
+<xs:sequence>
+<xs:element name="edit" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setisEditingResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
